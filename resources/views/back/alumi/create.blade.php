@@ -31,7 +31,7 @@
                         </div>
                         <!-- end page title -->
 
-                     <form action="{{url('admin/alumi/storage')}}" method="post">
+                     <form action="{{url('admin/alumi/storage')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-12">

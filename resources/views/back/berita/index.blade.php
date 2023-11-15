@@ -44,8 +44,8 @@
                                                     <th>No</th>
                                                     <th>Cover</th>
                                                     <th>Judul</th>
-                                                    <th>Jurusan</th>
-                                                    <th>Foto</th>
+                                                    <th>Kategori</th>
+                                                    <th>Isi</th>
                                                     <th>Aksi</th>
                                                 </tr>
                                             </thead>

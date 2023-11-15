@@ -38,7 +38,7 @@
                                             <a href="{{url('admin/alumi/create')}}" class="btn btn-primary mb-3"><i data-feather="plus"></i> Tambah Data Alumi</a>
                                     </div>
                                     <div class="col-12">
-                                        <table id="myTable" class="table  table-striped table-bordered" >
+                                        <table id="myTable" class="table table-striped table-bordered" >
                                             <thead>
                                                 <tr class="bg-dark text-white">
                                                     <th>No</th>
@@ -60,12 +60,11 @@
                                                     <td>{{$data->nama_alumi}}</td>
                                                     <td>{{$data->tahun_lulus}}</td>
                                                     <td>{{$data->jurusan}}</td>
-                                                    <td> <img src="{{$data->foto}}" width="50" alt="" srcset=""> </td>
+                                                    <td> <img src="{{asset($data->foto) }}" width="50" alt="" srcset=""> </td>
                                                     <td>
-                                                        <a href="{{url('admin/prestasi/'.$data->id.'/edit')}}" class="btn btn-primary rounded ">  <i data-feather="edit"></i> </a>
-                                                        {{-- <a href="{{}}" class="btn btn-danger rounded mb-1">  </a> --}}
+                                                        <a href="{{url('admin/alumi/'.$data->id.'/edit')}}" class="btn btn-primary rounded ">  <i data-feather="edit"></i> </a>
 
-                                                        <form class="d-inline" action="{{url('admin/prestasi/'.$data->id)}}" method="POST">
+                                                        <form class="d-inline" action="{{url('admin/alumi/'.$data->id)}}" method="POST"  enctype="multipart/form-data">
                                                             @csrf
                                                             @method("DELETE")
                                                                 <button class="btn btn-danger " onclick="return confirm('Apakah anda yakin ingin menghapus data ini ?')"  type="submit"> <i data-feather="trash"></i></button>

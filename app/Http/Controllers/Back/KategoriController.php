@@ -38,4 +38,5 @@ class KategoriController extends Controller
     public function destrory($id)
     {
 
-    }}
+    }
+}
