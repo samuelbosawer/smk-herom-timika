@@ -125,7 +125,7 @@ class BeritaController extends Controller
         if($data->cover){
            File::delete($data->cover);
        }
-       $data->forceDelete();
+       $data->delete();
        return redirect('/admin/berita');
 
     }

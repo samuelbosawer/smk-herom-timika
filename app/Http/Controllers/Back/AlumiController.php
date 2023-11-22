@@ -115,7 +115,7 @@ class AlumiController extends Controller
          if($data->foto){
             File::delete($data->foto);
         }
-        $data->forceDelete();
+        $data->delete();
         return redirect()->back();
     }
 }
