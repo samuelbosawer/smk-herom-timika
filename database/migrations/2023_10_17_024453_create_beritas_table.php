@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('beritas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('kategoris_id')->index()->constrained();
-            $table->string('title');
+            // $table->foreignId('kategoris_id')->index()->constrained();
+            $table->bigInteger('id_kategori');
+            $table->string('judul');
             $table->string('slug');
-            $table->string('desc');
-            $table->string('img');
+            $table->string('isi');
+            $table->string('cover');
             $table->string('status');
-            $table->integer('views');
             $table->timestamps();
         });
     }

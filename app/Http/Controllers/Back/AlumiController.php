@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Str;
 use App\Models\Alumi;
-use Illuminate\Support\Facades\Storage;
 use File;
 
 class AlumiController extends Controller
@@ -25,7 +24,6 @@ class AlumiController extends Controller
 
     public function storage(Request $request)
     {
-        // 'image|mimes:jpg,png|max:1000'
        $validated = $request->validate([
           'nama_alumi' => 'required',
           'tahun_lulus' => 'required',
