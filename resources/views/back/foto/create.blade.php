@@ -1,6 +1,6 @@
 @extends('back.layout.tamplate')
 @section('title')
-    Tambah Data Alumi - Admin
+    Tambah Data Foto - Admin
  @endsection
 @section('content')
 
@@ -21,45 +21,37 @@
                                 <div class="page-title-box">
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="{{url('admin/alumi')}}">Alumi</a></li>
+                                            <li class="breadcrumb-item"><a href="{{url('admin/foto')}}">Foto</a></li>
                                             <li class="breadcrumb-item active"> Tambah </li>
                                         </ol>
                                     </div>
-                                    <h4 class="page-title">Tambah Data Alumi</h4>
+                                    <h4 class="page-title">Tambah Data Foto</h4>
                                 </div>
                             </div>
                         </div>
                         <!-- end page title -->
 
-                     <form action="{{url('admin/alumi/storage')}}" method="post" enctype="multipart/form-data">
+                     <form action="{{url('admin/foto/storage')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-12">
                                 <div class="card-box">
-
                                     <div class="row">
-
                                         <div class="col-md-6">
                                             <div class="form-group mb-3">
-                                                <label for="nama_alumi"> Nama Alumi <span class="text-danger">*</span> </label>
-                                                <input type="text" id="nama_alumi" value="{{old('nama_alumi')}}" name="nama_alumi" placeholder="Masukan nama prestasi" class="form-control">
-                                                @if($errors->has('nama_alumi'))
-                                                    <label class="text-danger"> {{ $errors->first('nama_alumi') }} </label>
+                                                <label for="judul_foto"> Judul Foto <span class="text-danger">*</span> </label>
+                                                <input type="text" id="judul_foto" value="{{old('judul_foto')}}" name="judul_foto" placeholder="Masukan judul foto" class="form-control">
+                                                @if($errors->has('judul_foto'))
+                                                    <label class="text-danger"> {{ $errors->first('judul_foto') }} </label>
                                                 @endif
                                             </div>
                                         </div>
-
                                         <div class="col-md-6">
                                             <div class="form-group mb-3">
-                                                <label for="tahun_lulus"> Tahun Lulus <span class="text-danger">*</span> </label>
-                                                <select name="tahun_lulus" class="form-control" id="tahun_lulus">
-                                                    <option value="">Pilih Tahun Lulus</option>
-                                                    @for ($x = 2000; $x<=2050; $x++)
-                                                        <option value="{{$x}}"> {{$x}}</option>
-                                                    @endfor
-                                                </select>
-                                                @if($errors->has('tahun_lulus'))
-                                                    <label class="text-danger"> {{ $errors->first('tahun_lulus') }} </label>
+                                                <label for="link_foto"> Link Foto (Jika Ada) </label>
+                                                <input type="text" id="link_foto" value="{{old('link_foto')}}" name="link_foto" placeholder="Masukan link foto" class="form-control">
+                                                @if($errors->has('link_foto'))
+                                                    <label class="text-danger"> {{ $errors->first('link_foto') }} </label>
                                                 @endif
                                             </div>
                                         </div>
@@ -68,23 +60,7 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group mb-3">
-                                                <label for="jurusan"> Jurusan <span class="text-danger">*</span> </label>
-                                                <select name="jurusan" class="form-control" id="jurusan">
-                                                    <option value="">Pilih Jurusan</option>
-                                                    <option value="Geologi Pertambangan">Geologi Pertambangan</option>
-                                                    <option value="Teknik Alat Berat">Teknik Alat Berat</option>
-                                                    <option value="Teknik Komputer dan Jaringan">Teknik Komputer dan Jaringan</option>
-                                                    <option value="Perkantoran">Perkantoran</option>
-                                                </select>
-                                                    @if($errors->has('jurusan'))
-                                                    <label class="text-danger"> {{ $errors->first('jurusan') }} </label>
-                                                @endif
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <div class="form-group mb-3">
-                                                <label for="foto"> Foto  </label>
+                                                <label for="foto"> Foto  <span class="text-danger">*</span>  </label>
                                                 <input type="file" id="foto" value="{{old('foto')}}" name="foto" placeholder="" class="form-control">
                                                 @if($errors->has('foto'))
                                                     <label class="text-danger"> {{ $errors->first('foto') }} </label>

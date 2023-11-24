@@ -19,7 +19,7 @@ class BeritaSeeder extends Seeder
             'judul' => 'Lorem Ibsum lor gamores',
             'slug' => 'lorem-1',
             'isi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, necessitatibus!',
-            'cover' => '',
+            'cover' => 'gambar/foto.jpg',
             'status' => 'Publish'
         ]);
 
@@ -29,7 +29,7 @@ class BeritaSeeder extends Seeder
             'judul' => 'Lorem Ibsum lor gamores',
             'slug' => 'lorem-1',
             'isi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, necessitatibus!',
-            'cover' => '',
+            'cover' => 'gambar/foto.jpg',
             'status' => 'Draft'
         ]);
     }

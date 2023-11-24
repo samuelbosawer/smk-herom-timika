@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('detail_fotos', function (Blueprint $table) {
             $table->id();
+            $table->string('foto');
+            $table->string('desk')->nullable();
+            $table->bigInteger('id_foto');
             $table->timestamps();
         });
     }

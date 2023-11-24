@@ -52,7 +52,7 @@
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-8">
                                             <div class="form-group mb-3">
                                                 <label for="isi"> Isi Berita <span class="text-danger">*</span> </label>
                                                 <textarea id="isi" name="isi" rows="5" class="form-control rounded-0" placeholder="">{{old('isi',$data->isi)}}</textarea>
@@ -61,7 +61,7 @@
                                                 @endif
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                         <div class="row">
                                             <div class="col-12">
                                                 <div class="form-group mb-3">

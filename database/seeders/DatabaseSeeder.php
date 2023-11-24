@@ -4,8 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Models\Kategori;
-use App\Models\Prestasi;
+use App\Models\DetailFoto;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -21,5 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call(AlumiSeeder::class);
         $this->call(KategoriSeeder::class);
         $this->call(BeritaSeeder::class);
+        $this->call(FotoSeeder::class);
+        $this->call(DetailFotoSeeder::class);
     }
 }

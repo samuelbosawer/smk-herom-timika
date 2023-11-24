@@ -17,7 +17,7 @@ class AlumiSeeder extends Seeder
             "nama_alumi" => "Samuel",
             "tahun_lulus" => "2013",
             "jurusan" => "Teknik Komputer dan Jaringan",
-            "foto" => "\assets\images\users\user-2.jpg",
+            "foto" => "gambar/foto.jpg",
             "slug_alumi" => "samuel"
         ]);
 
@@ -25,7 +25,7 @@ class AlumiSeeder extends Seeder
             "nama_alumi" => "Novri",
             "tahun_lulus" => "2013",
             "jurusan" => "Teknik Komputer dan Jaringan",
-            "foto" => "\assets\images\users\user-2.jpg",
+            "foto" => "gambar/foto.jpg",
             "slug_alumi" => "novri"
         ]);
     }
