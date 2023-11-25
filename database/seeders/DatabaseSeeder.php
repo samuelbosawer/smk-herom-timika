@@ -22,5 +22,7 @@ class DatabaseSeeder extends Seeder
         $this->call(BeritaSeeder::class);
         $this->call(FotoSeeder::class);
         $this->call(DetailFotoSeeder::class);
+        $this->call(VideoSeeder::class);
+        $this->call(ProfilSeeder::class);
     }
 }

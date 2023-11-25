@@ -71,7 +71,7 @@ Route::group(['middleware' => ['role:admin','auth']], function () {
         // Kategori Berita
         Route::get('kategori',[KategoriController::class,'index'])->name('kategori');
         Route::get('kategori/create',[KategoriController::class,'create'])->name('kategori.create');
-        Route::get('kategori/{id}',[KategoriController::class,'show'])->name('kategori.show');
+        // Route::get('kategori/{id}',[KategoriController::class,'show'])->name('kategori.show');
         Route::delete('kategori/{id}',[KategoriController::class,'destrory'])->name('kategori.delete');
         Route::post('kategori/storage',[KategoriController::class,'storage'])->name('kategori.storage');
         Route::get('kategori/{id}/edit',[KategoriController::class,'edit'])->name('kategori.edit');
@@ -80,7 +80,7 @@ Route::group(['middleware' => ['role:admin','auth']], function () {
         // Foto
         Route::get('foto',[FotoController::class,'index'])->name('foto');
         Route::get('foto/create',[FotoController::class,'create'])->name('foto.create');
-        Route::get('foto/{id}',[FotoController::class,'show'])->name('foto.show');
+        // Route::get('foto/{id}',[FotoController::class,'show'])->name('foto.show');
         Route::delete('foto/{id}',[FotoController::class,'destrory'])->name('foto.delete');
         Route::post('foto/storage',[FotoController::class,'storage'])->name('foto.storage');
         Route::get('foto/{id}/edit',[FotoController::class,'edit'])->name('foto.edit');
@@ -89,7 +89,7 @@ Route::group(['middleware' => ['role:admin','auth']], function () {
         // Video
         Route::get('video',[VideoController::class,'index'])->name('video');
         Route::get('video/create',[VideoController::class,'create'])->name('video.create');
-        Route::get('video/{id}',[VideoController::class,'show'])->name('video.show');
+        // Route::get('video/{id}',[VideoController::class,'show'])->name('video.show');
         Route::delete('video/{id}',[VideoController::class,'destrory'])->name('video.delete');
         Route::post('video/storage',[VideoController::class,'storage'])->name('video.storage');
         Route::get('video/{id}/edit',[VideoController::class,'edit'])->name('video.edit');
@@ -106,12 +106,7 @@ Route::group(['middleware' => ['role:admin','auth']], function () {
 
         // Profil
         Route::get('profil',[ProfilController::class,'index'])->name('profil');
-        Route::get('profil/create',[ProfilController::class,'create'])->name('profil.create');
-        Route::get('profil/{id}',[ProfilController::class,'show'])->name('profil.show');
-        Route::delete('profil/{id}',[ProfilController::class,'destrory'])->name('profil.delete');
-        Route::post('profil/storage',[ProfilController::class,'storage'])->name('profil.storage');
-        Route::get('profil/{id}/edit',[ProfilController::class,'edit'])->name('profil.edit');
-        Route::put('profil/{id}',[ProfilController::class,'update'])->name('video.update');
+        Route::put('profil/{id}',[ProfilController::class,'update'])->name('profil.update');
 
     });
 });

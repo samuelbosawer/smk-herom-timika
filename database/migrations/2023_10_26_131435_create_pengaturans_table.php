@@ -13,6 +13,15 @@ return new class extends Migration
     {
         Schema::create('pengaturans', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_web')->nullable();
+            $table->string('desk_web')->nullable();
+            $table->string('logo')->nullable();
+            $table->string('nav')->nullable();
+            $table->string('ig')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('youtube')->nullable();
+            $table->string('tiktok')->nullable();
+            $table->string('no_hp')->nullable();
             $table->timestamps();
         });
     }

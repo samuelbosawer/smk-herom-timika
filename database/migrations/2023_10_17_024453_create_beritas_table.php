@@ -17,7 +17,7 @@ return new class extends Migration
             $table->bigInteger('id_kategori');
             $table->string('judul');
             $table->string('slug');
-            $table->string('isi');
+            $table->mediumText('isi');
             $table->string('cover');
             $table->string('status');
             $table->timestamps();
