@@ -115,7 +115,7 @@ class BeritaController extends Controller
         $request->cover->move(public_path('gambar/cover/'), $nama_cover);
     }
       $data->update();
-      Alert::success('Info', 'Tambah data berita berhasil ');
+      Alert::success('Info', 'Ubah data berita berhasil ');
       return redirect('/admin/berita');
     }
 

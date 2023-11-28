@@ -24,5 +24,6 @@ class DatabaseSeeder extends Seeder
         $this->call(DetailFotoSeeder::class);
         $this->call(VideoSeeder::class);
         $this->call(ProfilSeeder::class);
+        $this->call(PengaturanSeeder::class);
     }
 }

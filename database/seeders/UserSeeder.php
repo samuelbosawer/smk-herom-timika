@@ -19,10 +19,10 @@ class UserSeeder extends Seeder
             'first_name' => 'Admin',
             'last_name' => '',
             'image' => '',
-            'email' => 'admin@gmail.com',
-            'password' =>  bcrypt('admin@gmail.com')
+            'email' => 'admin@smkpkhermontimika.sch.id',
+            'password' =>  bcrypt('admin@smkpkhermontimika.sch.id')
         ]);
-        
+
         $admin->assignRole('admin');
 
        $editor = User::create([

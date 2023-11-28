@@ -37,7 +37,7 @@
                                     <div class="col-12">
                                             <a href="{{url('admin/prestasi/create')}}" class="btn btn-primary mb-3"><i data-feather="plus"></i> Tambah Data Prestasi</a>
                                     </div>
-                                    <div class="col-12">
+                                    <div class="col-12 table-responsive">
                                         <table id="myTable" class="table  table-striped table-bordered" >
                                             <thead>
                                                 <tr class="bg-dark text-white">

@@ -5,11 +5,11 @@
         <meta charset="utf-8" />
         <title>Log In </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
-        <meta content="Coderthemes" name="author" />
+        <meta content="{{asset($pengaturan->desk_web)}}" name="description" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="../assets/images/favicon.ico">
+        <link rel="shortcut icon" href="{{asset($pengaturan->nav)}}">
+
 
 		<!-- App css -->
 		<link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
@@ -32,29 +32,29 @@
                         <div class="card bg-pattern">
 
                             <div class="card-body p-4">
-                                
+
                                 <div class="text-center w-75 m-auto">
                                     <div class="auth-logo">
                                         <a href="#" class="logo logo-dark text-center">
                                             <span class="logo-lg">
-                                                <img src="/assets/images/logo-dark.png" alt="" height="22">
+                                                <img src="{{asset($pengaturan->logo)}}" alt="" height="200">
                                             </span>
                                         </a>
-                    
+
                                         <a href="#" class="logo logo-light text-center">
                                             <span class="logo-lg">
-                                                <img src="/assets/images/logo-light.png" alt="" height="22">
+                                                <img src="{{asset($pengaturan->logo)}}" alt="" height="200">
                                             </span>
                                         </a>
                                     </div>
-                                    <p class="text-muted mb-4 mt-3">Enter your email address and password to access admin panel.</p>
+                                    <p class="text-muted mb-4 mt-3">Masukan email dan password untuk login. </p>
                                 </div>
 
                                 <form method="POST" action="{{ route('login') }}">
                                 @csrf
 
                                     <div class="form-group mb-3">
-                                        <label for="emailaddress">Email address</label>
+                                        <label for="emailaddress">Email </label>
                                         <input class="form-control" type="email" name="email" value="{{old('email') }}" id="emailaddress" required="" placeholder="Enter your email">
 
                                         @error('email')
@@ -83,12 +83,12 @@
                                     </div>
 
                                     <div class="form-group mb-0 text-center">
-                                        <button class="btn btn-primary btn-block" type="submit"> Log In </button>
+                                        <button class="btn btn-primary btn-block" type="submit"> Login </button>
                                     </div>
 
                                 </form>
 
-                               
+
 
                             </div> <!-- end card-body -->
                         </div>
@@ -110,7 +110,7 @@
 
 
         <footer class="footer footer-alt">
-            2013 - <script>document.write(new Date().getFullYear())</script> &copy; SB</a> 
+            <script>document.write(new Date().getFullYear())</script> &copy; {{$pengaturan->nama_web}}</a>
         </footer>
 
         <!-- Vendor js -->
@@ -118,6 +118,6 @@
 
         <!-- App js -->
         <script src="/assets/js/app.min.js"></script>
-        
+
     </body>
 </html>

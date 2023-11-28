@@ -1,0 +1,9 @@
+nav.navbar a.navbar-brand strong{
+ font-size: 18px;
+}
+
+footer.footer {
+    background: #fff;
+    color: #fff;
+    padding-top: 4rem;
+}

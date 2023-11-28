@@ -3,7 +3,7 @@
     Dashboard - Admin
  @endsection
 @section('content')
-       
+
 
             <!-- ============================================================== -->
             <!-- Start Page Content here -->
@@ -14,7 +14,7 @@
 
                     <!-- Start Content-->
                     <div class="container-fluid">
-                        
+
                         <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
@@ -28,45 +28,57 @@
                                     <h4 class="page-title">Dashboard</h4>
                                 </div>
                             </div>
-                        </div>     
-                        <!-- end page title --> 
+                        </div>
+                        <!-- end page title -->
 
                         <div class="row">
-                            <div class="col-md-6 col-xl-3">
-                                <div class="card-box">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="avatar-sm bg-blue rounded">
-                                                <i class="fe-aperture avatar-title font-22 text-white"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="text-right">
-                                                <h3 class="text-dark my-1">$<span data-plugin="counterup">12,145</span></h3>
-                                                <p class="text-muted mb-1 text-truncate">Income status</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mt-3">
-                                        <h6 class="text-uppercase">Target <span class="float-right">60%</span></h6>
-                                        <div class="progress progress-sm m-0">
-                                            <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                                <span class="sr-only">60% Complete</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- end card-box-->
-                            </div> <!-- end col -->
 
-                           
+                            <div class="col-md-6 col-xl-6">
+                                <div class="card-box">
+                                    <i class="fa fa-info-circle text-muted float-right" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="More Info"></i>
+                                    <h4 class="mt-0 font-16">Data Prestasi</h4>
+                                    <h2 class="text-success my-3 text-center"> <span data-plugin="counterup">{{$prestasi}}</span></h2>
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-6">
+                                <div class="card-box">
+                                    <i class="fa fa-info-circle text-muted float-right" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="More Info"></i>
+                                    <h4 class="mt-0 font-16">Data Alumi</h4>
+                                    <h2 class="text-success my-3 text-center"> <span data-plugin="counterup">{{$alumi}}</span></h2>
+                                    <p class="text-muted mb-0"></p>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-6">
+                                <div class="card-box">
+                                    <i class="fa fa-info-circle text-muted float-right" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="More Info"></i>
+                                    <h4 class="mt-0 font-16">Data Berita</h4>
+                                    <h2 class="text-success my-3 text-center"> <span data-plugin="counterup">{{$berita}}</span></h2>
+                                    <p class="text-muted mb-0">Publish : {{$publish}} <span class="float-right">  Draft : {{$draft}} </span></p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-xl-6">
+                                <div class="card-box">
+                                    <i class="fa fa-info-circle text-muted float-right" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="More Info"></i>
+                                    <h4 class="mt-0 font-16">Data Galeri </h4>
+                                    <h2 class="text-success my-3 text-center"> <span data-plugin="counterup">{{$foto+$video}}</span></h2>
+                                    <p class="text-muted mb-0">Foto : {{$foto}}  <span class="float-right">  Video : {{$video}} </span></p>
+                                </div>
+                            </div>
+
+
+
                         </div>
                         <!-- end row -->
 
-                     
-                     
+
+
                     </div> <!-- container -->
 
                 </div> <!-- content -->
 @endsection
 
-               

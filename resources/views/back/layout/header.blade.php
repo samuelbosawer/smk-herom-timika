@@ -5,11 +5,10 @@
         <meta charset="utf-8" />
         <title>@yield('title')</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
-        <meta content="Coderthemes" name="author" />
+        <meta content="{{asset($pengaturan->desk_web)}}" name="description" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="/assets/images/favicon.ico">
+        <link rel="shortcut icon" href="{{asset($pengaturan->nav)}}">
 
         <!-- plugin css -->
         <link href="/assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
@@ -45,8 +44,6 @@
 
 
 
-
-
                         <li class="dropdown d-none d-lg-inline-block">
                             <a class="nav-link dropdown-toggle arrow-none waves-effect waves-light" data-toggle="fullscreen" href="#">
                                 <i class="fe-maximize noti-icon"></i>
@@ -59,7 +56,7 @@
 
                         <li class="dropdown notification-list topbar-dropdown">
                             <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <img src="/assets/images/users/user-1.jpg" alt="user-image" class="rounded-circle">
+                                <img src="{{asset('gambar/admin.png')}}" alt="user-image" class="rounded-circle">
                                 <span class="pro-user-name ml-1">
                                     {{ auth()->user()->first_name }} <i class="mdi mdi-chevron-down"></i>
                                 </span>
@@ -69,20 +66,6 @@
                                 <div class="dropdown-header noti-title">
                                     <h6 class="text-overflow m-0">Welcome !</h6>
                                 </div>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="fe-user"></i>
-                                    <span>My Account</span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <i class="fe-settings"></i>
-                                    <span>Settings</span>
-                                </a>
-
-
 
                                 <!-- item-->
 
@@ -104,23 +87,23 @@
 
                     <!-- LOGO -->
                     <div class="logo-box">
-                        <a href="index.html" class="logo logo-dark text-center">
+                        <a href="{{url('/admin')}}" class="logo logo-dark text-center">
                             <span class="logo-sm">
-                                <img src="/assets/images/logo-sm.png" alt="" height="22">
+                                <img src="{{asset($pengaturan->logo)}}" alt="" height="22">
                                 <!-- <span class="logo-lg-text-light">UBold</span> -->
                             </span>
                             <span class="logo-lg">
-                                <img src="/assets/images/logo-dark.png" alt="" height="20">
+                                <img src="{{asset($pengaturan->logo)}}" alt="" height="20">
                                 <!-- <span class="logo-lg-text-light">U</span> -->
                             </span>
                         </a>
 
-                        <a href="index.html" class="logo logo-light text-center">
+                        <a href="{{url('/admin')}}" class="logo logo-light text-center">
                             <span class="logo-sm">
-                                <img src="/assets/images/logo-sm.png" alt="" height="22">
+                                <img src="{{asset($pengaturan->logo)}}" alt="" height="22">
                             </span>
                             <span class="logo-lg">
-                                <img src="/assets/images/logo-light.png" alt="" height="20">
+                                <img src="{{asset($pengaturan->logo)}}" alt="" height="60"> <label class="h5 text-white fw-bolder">ADMIN</label>
                             </span>
                         </a>
                     </div>
@@ -144,43 +127,41 @@
                             <!-- End mobile menu toggle-->
                         </li>
 
-                        <li class="dropdown d-none d-xl-block">
+                        <li class="dropdown d-none d-md-block">
                             <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                Create New
+                                Pintasan
                                 <i class="mdi mdi-chevron-down"></i>
                             </a>
                             <div class="dropdown-menu">
                                 <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">
-                                    <i class="fe-briefcase mr-1"></i>
-                                    <span>New Projects</span>
+                                <a href="{{url('admin/prestasi/create')}}" class="dropdown-item">
+                                    <span> Buat Data Prestasi</span>
                                 </a>
 
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">
-                                    <i class="fe-user mr-1"></i>
-                                    <span>Create Users</span>
+                                <a href="{{url('admin/alumi/create')}}" class="dropdown-item">
+                                    <span> Buat Data Alumi</span>
                                 </a>
 
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">
-                                    <i class="fe-bar-chart-line- mr-1"></i>
-                                    <span>Revenue Report</span>
+                                <a href="{{url('admin/berita/create')}}" class="dropdown-item">
+                                    <span> Buat Data Berita</span>
                                 </a>
 
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">
-                                    <i class="fe-settings mr-1"></i>
-                                    <span>Settings</span>
+                                <a href="{{url('admin/foto/create')}}" class="dropdown-item">
+                                    <span> Buat Data Foto</span>
                                 </a>
 
-                                <div class="dropdown-divider"></div>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">
-                                    <i class="fe-headphones mr-1"></i>
-                                    <span>Help & Support</span>
+                                <a href="{{url('admin/video/create')}}" class="dropdown-item">
+                                    <span> Buat Data Video</span>
                                 </a>
+
+                                <a href="{{url('admin/profil')}}" class="dropdown-item">
+                                    <span> Ubah Data Profil</span>
+                                </a>
+
+                                <a href="{{url('admin/pengaturan')}}" class="dropdown-item">
+                                    <span> Ubah Data Pengaturan</span>
+                                </a>
+
 
                             </div>
                         </li>

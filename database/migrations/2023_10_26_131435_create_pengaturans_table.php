@@ -22,6 +22,10 @@ return new class extends Migration
             $table->string('youtube')->nullable();
             $table->string('tiktok')->nullable();
             $table->string('no_hp')->nullable();
+
+            $table->string('email')->nullable();
+            $table->string('alamat')->nullable();
+            $table->string('alamat_web')->nullable();
             $table->timestamps();
         });
     }
