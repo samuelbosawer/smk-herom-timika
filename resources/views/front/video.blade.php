@@ -27,40 +27,31 @@
 
       <div class="row">
         <div class="col-lg-12 ">
-            <h1>Video Terbaru</h1>
-            <div class="row">
-              <p class="col-lg-8">Video SMKS Hermon Mimika</p>
-            </div>
             <div class="row mt-5">
-              <div class="col-md-3">
-                <div class="blog-post">
-                  <div class="image"><img src="assets-visitor/img/blog-img.jpg" alt="Projects aim to help those experiencing mental">
-                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-outline-light"> Link Foto</a></div>
-                  </div>
-                  <div class="text bg-gray"><a href="blog-post.html">
-                      <h4 class="text-this">Projects aim to help those experiencing mental</h4></a>
-                    <ul class="post-meta list-inline">
-                      <li class="list-inline-item"><i class="icon-clock-1"></i> 14 August 2017</li>
-                      {{-- <li class="list-inline-item"><i class="icon-chat"></i>340</li> --}}
-                    </ul>
-                  </div>
-                </div>
-              </div>
 
-              <div class="col-md-3">
+              @foreach ($data as $v )
+              <div class="col-md-6">
                 <div class="blog-post">
-                  <div class="image"><img src="assets-visitor/img/blog-img.jpg" alt="Projects aim to help those experiencing mental">
-                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-outline-light"> Link Foto</a></div>
-                  </div>
-                  <div class="text bg-gray"><a href="blog-post.html">
-                      <h4 class="text-this">Projects aim to help those experiencing mental</h4></a>
-                    <ul class="post-meta list-inline">
-                      <li class="list-inline-item"><i class="icon-clock-1"></i> 14 August 2017</li>
-                      {{-- <li class="list-inline-item"><i class="icon-chat"></i>340</li> --}}
-                    </ul>
-                  </div>
+                <div class="image">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/{!!$v->link_video!!}"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    {{-- <div class="overlay d-flex align-items-center justify-content-center"><a href="{{$v->link_video}}" class="btn btn-outline-light">Lihat Video Full</a></div> --}}
                 </div>
-              </div>
+                <div class="text bg-gray"><a href="{{$v->link_video}}">
+                    <h4 class="text-this">{{$v->judul_video}}</h4></a>
+                    <ul class="post-meta list-inline">
+                    <li class="list-inline-item"><i class="icon-clock-1"></i> {{ $v->created_at->isoFormat('dddd, D MMMM Y'); }}</li>
+
+                    </ul>
+                </div>
+                </div>
+            </div>
+
+              @endforeach
+
+
             </div>
         </div>
       </div>

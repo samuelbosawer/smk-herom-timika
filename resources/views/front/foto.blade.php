@@ -27,42 +27,27 @@
 
       <div class="row">
         <div class="col-lg-12 ">
-
             <div class="row mt-5">
-              <div class="col-md-3">
-                <div class="blog-post">
-                  <div class="image"><img src="assets-visitor/img/blog-img.jpg" alt="Projects aim to help those experiencing mental">
-                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-outline-light"> Link Foto</a></div>
-                  </div>
-                  <div class="text bg-gray"><a href="blog-post.html">
-                      <h4 class="text-this">Projects aim to help those experiencing mental</h4></a>
-                    <ul class="post-meta list-inline">
-                      <li class="list-inline-item"><i class="icon-clock-1"></i> 14 August 2017</li>
-                      {{-- <li class="list-inline-item"><i class="icon-chat"></i>340</li> --}}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-3">
-                <div class="blog-post">
-                  <div class="image"><img src="assets-visitor/img/blog-img.jpg" alt="Projects aim to help those experiencing mental">
-                    <div class="overlay d-flex align-items-center justify-content-center"><a href="#" class="btn btn-outline-light"> Link Foto</a></div>
-                  </div>
-                  <div class="text bg-gray"><a href="blog-post.html">
-                      <h4 class="text-this">Projects aim to help those experiencing mental</h4></a>
-                    <ul class="post-meta list-inline">
-                      <li class="list-inline-item"><i class="icon-clock-1"></i> 14 August 2017</li>
-                      {{-- <li class="list-inline-item"><i class="icon-chat"></i>340</li> --}}
-                    </ul>
-                  </div>
-                </div>
-              </div>
+                @foreach ($data as $d )
+                      <div class="col-md-4">
+                        <div class="blog-post">
+                        <div class="image"><img src="{{asset($d->foto)}}" width="100%" alt="{{$d->judul_foto}}">
+                            @if ($d->link_foto != null)
+                                <div class="overlay d-flex align-items-center justify-content-center"><a href="{{$d->link_foto}}" class="btn btn-outline-light"> Link Foto</a></div>
+                            @endif
+                        </div>
+                        <div class="text bg-gray"><a href="#">
+                            <h4 class="text-this">{{$d->judul_foto}} </h4></a>
+                            <ul class="post-meta list-inline">
+                            <li class="list-inline-item"><i class="icon-clock-1"></i> {{ $d->created_at->isoFormat('dddd, D MMMM Y'); }}</li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
       </div>
-
-
   </section>
 @endsection
 
