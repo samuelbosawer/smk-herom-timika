@@ -7,11 +7,8 @@ namespace App\Providers;
 use App\Models\Pengaturan;
 use App\Models\Kategori;
 
-
-
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\URL;
-
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -29,6 +26,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         if(config('app.env') === 'production') { URL::forceScheme('https'); }
+
+        $post = Pengaturan::first();
+        $post->visit()->withIp();
 
         try{
             view()->share([

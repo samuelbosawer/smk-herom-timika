@@ -7,7 +7,8 @@
 <!-- Hero Section-->
 <section class="hero hero-page">
     <div style="background: url(assets-visitor/img/courses-banner.jpg)" class="hero-banner">       </div>
-  </section>
+</section>
+
   <section>
     <div class="container">
       <nav aria-label="breadcrumb" role="navigation">

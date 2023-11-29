@@ -15,6 +15,7 @@ class DashboardController extends Controller
         $berita = Berita::where('status','Publish')->orderByDesc('id')->limit(4)->get();
         $foto = Foto::orderByDesc('id')->limit(4)->get();
         $video = Video::orderByDesc('id')->limit(4)->get();
+
         return view('front.beranda',compact('berita','foto','video'));
     }
 
