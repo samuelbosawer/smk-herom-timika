@@ -730,6 +730,10 @@ nav.navbar .dropdown .dropdown-menu.active {
   background: rgba(244, 52, 61, 0.89);
 }
 
+.info-boxes .info-box.abu::before {
+    background: rgba(151, 151, 151, 0.89);
+  }
+
 .info-boxes p {
   font-weight: 300;
   font-size: 0.9rem;
@@ -1728,7 +1732,7 @@ ul.social-buttons .right strong {
 
 /*
 * ==========================================================
-*     STAFF 
+*     STAFF
 * ==========================================================
 */
 .staff-member {

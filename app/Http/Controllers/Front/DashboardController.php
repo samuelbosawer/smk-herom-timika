@@ -12,17 +12,15 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $berita = Berita::where('status','Publish')->orderByDesc('id')->limit(4)->get();
+        $berita = Berita::where('status', 'Publish')->orderByDesc('id')->limit(4)->get();
         $foto = Foto::orderByDesc('id')->limit(4)->get();
         $video = Video::orderByDesc('id')->limit(4)->get();
 
-        return view('front.beranda',compact('berita','foto','video'));
+        return view('front.beranda', compact('berita', 'foto', 'video'));
     }
 
     public function kontak()
     {
         return view('front.kontak');
     }
-
-
 }

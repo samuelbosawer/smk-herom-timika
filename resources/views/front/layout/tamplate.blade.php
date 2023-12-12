@@ -2,4 +2,3 @@
             <!-- Panggil Konten -->
             @yield('content')
             @include('front.layout.footer')
-
