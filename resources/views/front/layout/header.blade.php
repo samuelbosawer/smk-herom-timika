@@ -35,6 +35,10 @@
     <link rel="stylesheet" href="/assets-visitor/css/custom.css">
     <!-- Favicon-->
     <link rel="shortcut icon" href="{{ asset($pengaturan->nav) }}">
+
+    <!-- Data table -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -84,8 +88,8 @@
                                 <li><a href="{{ url('/visi-misi') }}" class="dropdown-item nav-link nav-custom">Visi &
                                         Misi</a>
                                 </li>
-                                <li><a href="{{ url('/visi-misi') }}"
-                                        class="dropdown-item nav-link nav-custom">Struktur Organisasi</a>
+                                <li><a href="{{ url('/struktur') }}" class="dropdown-item nav-link nav-custom">Struktur
+                                        Organisasi</a>
                                 </li>
                         </div>
                         <!-- multi-level dropdown-->

@@ -1,6 +1,6 @@
 @extends('front.layout.tamplate')
 @section('title')
-    Profil Sekolah
+    Struktur Organisasi Sekolah
 @endsection
 @section('content')
     <!-- Hero Section-->
@@ -13,18 +13,19 @@
             <nav aria-label="breadcrumb" role="navigation">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ url('/beranda') }}">Beranda</a></li>
-                    <li aria-current="page" class="breadcrumb-item active">Profil</li>
+                    <li aria-current="page" class="breadcrumb-item active">Struktur Organisasi</li>
                 </ol>
             </nav>
             <div class="row">
                 <div class="col-xl-8 text-content">
-                    <h1 class="mb-4">Profil </h1>
-                    {{ $data->profil }}
+                    <h3 class="mb-4">Struktur Organisasi Sekolah </h3>
+                    {{ $data->struktur }}
                 </div>
                 <div class="col-xl-4 text-content">
                     @include('front.include.sidebar')
                 </div>
             </div>
+
         </div>
         </div>
     </section>

@@ -10,13 +10,13 @@ class BeritaController extends Controller
 {
     public function index()
     {
-        $data = Berita::orderByDesc('id')->get();
-        return view('front.berita',compact('data'));
+        $data = Berita::where('status', 'Publish')->orderByDesc('id')->get();
+        return view('front.berita', compact('data'));
     }
 
     public function show($slug)
     {
-        $data = Berita::where('slug',$slug)->first();
-        return view('front.berita-detail',compact('data'));
+        $data = Berita::where('slug', $slug)->where('status', 'Publish')->first();
+        return view('front.berita-detail', compact('data'));
     }
 }

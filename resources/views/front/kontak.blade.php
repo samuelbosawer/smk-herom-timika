@@ -17,37 +17,33 @@
             </nav>
             <h1 class="mb-4">Kontak</h1>
             <p class="lead mb-5">
-                Anda dapat menghubungi
+                {{-- Anda dapat menghubungi --}}
             </p>
             <div class="row">
                 <div class="col-md-4">
                     <div class="contact-icon">
                         <div class="icon icon-map-1"></div>
                     </div>
-                    <h3>Address</h3>
-                    <p>13/25 New Avenue<br>New Heaven, 45Y 73J<br>England, <strong>Great Britain</strong></p>
+                    <h3>Alamat</h3>
+                    <p>{{ $pengaturan->alamat }}</p>
                 </div>
                 <div class="col-md-4">
                     <div class="contact-icon">
                         <div class="icon icon-support"></div>
                     </div>
-                    <h3>Call center</h3>
-                    <p>This number is toll free if calling from Great Britain otherwise we advise you to use the electronic
-                        form of communication.</p>
-                    <p><strong>+33 555 444 333</strong></p>
+                    <h3>No. Telp</h3>
+                    <p><strong>{{ $pengaturan->no_hp }}</strong></p>
                 </div>
                 <div class="col-md-4">
                     <div class="contact-icon">
                         <div class="icon icon-envelope"></div>
                     </div>
-                    <h3>Electronic support</h3>
-                    <p>Please feel free to write an email to us or to use our electronic ticketing system.</p>
-                    <ul class="list-style-none">
-                        <li><strong><a href="mailto:">info@fakeemail.com</a></strong></li>
-                        <li><strong><a href="#">
+                    <h3>Email</h3>
+                    {{-- <p>Please feel free to write an email to us or to use our electronic ticketing system.</p> --}}
+                    <strong><a href="mailto:{{ $pengaturan->email }}">{{ $pengaturan->email }}</a></strong>
+                    {{-- <li><strong><a href="#">
                                     Ticketio
-                                    - our ticketing support platform</a></strong></li>
-                    </ul>
+                                    - our ticketing support platform</a></strong></li> --}}
                 </div>
             </div>
         </div>

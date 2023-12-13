@@ -14,8 +14,12 @@ class Berita extends Model
 
     public function kategori(): BelongsTo
     {
-        return $this->belongsTo(Kategori::class, 'id_kategori','id');
+        return $this->belongsTo(Kategori::class, 'id_kategori', 'id');
         // return $this->belongsTo(User::class,'user_id','id');
 
     }
+
+    protected $casts = [
+        'created_at' => 'datetime'
+    ];
 }

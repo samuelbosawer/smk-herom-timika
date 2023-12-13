@@ -37,11 +37,8 @@
                                 </div>
                             </div>
                         @endforeach
-
                     </div>
-                </div>
 
-                <div class="col-lg-8 order-lg-3 mt-5">
                     <h3>Foto Terbaru</h3>
                     <div class="row">
                         <p class="col-lg-8">Foto terbaru SMKS Hermon Mimika</p>
@@ -71,10 +68,7 @@
                         @endforeach
 
                     </div>
-                </div>
 
-
-                <div class="col-lg-8 order-lg-4 mt-5">
                     <h3>Video Terbaru</h3>
                     <div class="row">
                         <p class="col-lg-8">Video terbaru SMKS Hermon Mimika</p>
@@ -108,7 +102,11 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 order-lg-2">
+
+
+
+
+                <div class="col-lg-4 order-lg-2 d-flex">
                     <!-- sidebar-->
                     @include('front.include.sidebar')
                 </div>
