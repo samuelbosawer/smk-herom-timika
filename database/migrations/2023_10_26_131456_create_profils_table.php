@@ -14,6 +14,9 @@ return new class extends Migration
         Schema::create('profils', function (Blueprint $table) {
             $table->id();
             $table->mediumText('profil');
+            $table->mediumText('visi');
+            $table->mediumText('misi');
+            $table->mediumText('struktur');
             $table->timestamps();
         });
     }

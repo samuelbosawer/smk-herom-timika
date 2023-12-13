@@ -14,7 +14,10 @@ class ProfilSeeder extends Seeder
     public function run(): void
     {
         Profil::create([
-            'profil' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore incidunt eum ducimus eius exercitationem cum iste, reiciendis sunt possimus minima!'
+            'profil' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore incidunt eum ducimus eius exercitationem cum iste, reiciendis sunt possimus minima!',
+            'visi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore incidunt eum ducimus eius exercitationem cum iste, reiciendis sunt possimus minima!',
+            'misi' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore incidunt eum ducimus eius exercitationem cum iste, reiciendis sunt possimus minima!',
+            'struktur' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore incidunt eum ducimus eius exercitationem cum iste, reiciendis sunt possimus minima!',
         ]);
     }
 }
