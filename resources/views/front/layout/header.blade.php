@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="description" content="" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>@yield('title')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="all,follow">
+    {{-- <meta name="robots" content="all,follow"> --}}
     <meta property="og:locale" content="id_ID" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ $pengaturan->nama_web }}" />
