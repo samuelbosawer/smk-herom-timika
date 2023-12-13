@@ -74,10 +74,31 @@
                     <div class="navbar-nav ml-auto">
                         <div class="nav-item"><a href="{{ url('/beranda') }}" class="nav-link nav-custom ">Beranda
                                 <span class="sr-only">(current)</span></a></div>
-                        <div class="nav-item"><a href="{{ url('/profil') }}" class="nav-link nav-custom ">Profil <span
-                                    class="sr-only">(current)</span></a></div>
+                        <!-- multi-level dropdown-->
+                        <div class="nav-item dropdown"><a id="profil" href="#" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" class="nav-link nav-custom">Profil <i
+                                    class="fa fa-angle-down"></i></a>
+                            <ul aria-labelledby="profil" class="dropdown-menu">
+                                <li><a href="{{ url('/profil') }}" class="dropdown-item nav-link nav-custom">Profil</a>
+                                </li>
+                                <li><a href="{{ url('/visi-misi') }}" class="dropdown-item nav-link nav-custom">Visi &
+                                        Misi</a>
+                                </li>
+                                <li><a href="{{ url('/visi-misi') }}"
+                                        class="dropdown-item nav-link nav-custom">Struktur Organisasi</a>
+                                </li>
+                        </div>
+                        <!-- multi-level dropdown-->
+                        <div class="nav-item dropdown"><a id="siswa" href="#" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" class="nav-link nav-custom">Siswa <i
+                                    class="fa fa-angle-down"></i></a>
+                            <ul aria-labelledby="siswa" class="dropdown-menu">
+                                <li><a href="{{ url('/alumi') }}" class="dropdown-item nav-link nav-custom">Alumi</a>
+                                </li>
+
+                        </div>
                         <div class="nav-item"><a href="{{ url('/prestasi') }}" class="nav-link nav-custom ">Prestasi
-                                <span class="sr-only">(current)</span></a></div>
+                                <span class="sr-only">(current)</span> </a> </div>
                         <!-- multi-level dropdown-->
                         <div class="nav-item dropdown"><a id="galeri" href="#" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false" class="nav-link nav-custom">Galeri <i
