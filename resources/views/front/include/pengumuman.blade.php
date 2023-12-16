@@ -1,5 +1,5 @@
  <!-- Events Section-->
- <section class="events   mb-5">
+ <section class="events">
      <div class="container p-3">
          <header class="text-center">
              <h1 class="mt-5 mb-1"> <small></small>PENGUMUMAN</h1>
