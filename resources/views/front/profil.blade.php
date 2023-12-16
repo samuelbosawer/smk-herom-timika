@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-xl-8 text-content">
                     <h1 class="mb-4">Profil </h1>
-                    {{ $data->profil }}
+                    {!! $data->profil !!}
                 </div>
                 <div class="col-xl-4 text-content">
                     @include('front.include.sidebar')

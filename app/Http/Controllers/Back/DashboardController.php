@@ -9,6 +9,9 @@ use App\Models\Foto;
 use App\Models\Prestasi;
 use App\Models\Video;
 use App\Models\Pengaturan;
+use App\Models\Guru;
+use App\Models\Jurusan;
+use App\Models\Pengumuman;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -20,8 +23,11 @@ class DashboardController extends Controller
         $alumi = Alumi::count();
 
         $berita = Berita::count();
-        $publish = Berita::where('status','publish')->count();
-        $draft = Berita::where('status','draft')->count();
+        $guru = Guru::count();
+        $jurusan = Jurusan::count();
+        $pengumuman = Pengumuman::count();
+        $publish = Berita::where('status', 'publish')->count();
+        $draft = Berita::where('status', 'draft')->count();
 
         $foto = Foto::count();
         $prestasi = Prestasi::count();
@@ -43,6 +49,6 @@ class DashboardController extends Controller
             ->count();
 
 
-        return view('back.dashboard.index',compact('alumi','berita','foto','prestasi','video','publish','draft','total','hari','bulan','tahun'));
+        return view('back.dashboard.index', compact('alumi', 'berita', 'foto', 'prestasi', 'video', 'publish', 'draft', 'total', 'hari', 'bulan', 'tahun', 'pengumuman', 'guru', 'jurusan'));
     }
 }

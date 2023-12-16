@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="" />
+    <meta name="description" content="{{ $pengaturan->nama_web }}" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>@yield('title')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -69,7 +69,7 @@
         <!-- navbar-->
         <nav class="navbar navbar-expand-lg">
 
-            <div class="container"> <img src="{{ asset($pengaturan->logo) }}" width="100" srcset=""> <a
+            <div class="container"> <img src="{{ asset($pengaturan->logo) }}" width="50" srcset=""> <a
                     href="{{ url('/') }}" class="navbar-brand"><strong class="ml-3"> SMKS Hermon Energi <br> Dan
                         Pertambangan Mimika </strong></a>
                 <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -79,20 +79,47 @@
                     <div class="navbar-nav ml-auto">
                         <div class="nav-item"><a href="{{ url('/beranda') }}" class="nav-link nav-custom ">Beranda
                                 <span class="sr-only">(current)</span></a></div>
+                        <div class="nav-item dropdown"><a id="berita" href="#" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" class="nav-link nav-custom">Berita <i
+                                    class="fa fa-angle-down"></i></a>
+                            <ul aria-labelledby="berita" class="dropdown-menu">
+                                <li><a href="{{ url('/berita') }}" class="dropdown-item nav-link nav-custom">Berita</a>
+                                </li>
+                                <li class="dropdown-submenu"><a id="kategori" href="http://example.com"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                        class="nav-link">Kategori <i class="fa fa-angle-down"></i></a>
+                                    <ul aria-labelledby="kategori" class="dropdown-menu">
+                                        @foreach ($kategori as $k)
+                                            <li><a href="kategori/{{ $k->slug }}"
+                                                    class="dropdown-item nav-link">{{ $k->nama }}</a></li>
+                                        @endforeach
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                         <!-- multi-level dropdown-->
                         <div class="nav-item dropdown"><a id="profil" href="#" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false" class="nav-link nav-custom">Profil <i
                                     class="fa fa-angle-down"></i></a>
                             <ul aria-labelledby="profil" class="dropdown-menu">
-                                <li><a href="{{ url('/profil') }}" class="dropdown-item nav-link nav-custom">Profil</a>
+                                <li><a href="{{ url('/profil') }}"
+                                        class="dropdown-item nav-link nav-custom">Profil</a>
                                 </li>
-                                <li><a href="{{ url('/visi-misi') }}" class="dropdown-item nav-link nav-custom">Visi &
+                                <li><a href="{{ url('/visi-misi') }}" class="dropdown-item nav-link nav-custom">Visi
+                                        &
                                         Misi</a>
                                 </li>
-                                <li><a href="{{ url('/struktur') }}" class="dropdown-item nav-link nav-custom">Struktur
+                                <li><a href="{{ url('/struktur') }}"
+                                        class="dropdown-item nav-link nav-custom">Struktur
                                         Organisasi</a>
                                 </li>
+                                <li><a href="{{ url('/guru') }}" class="dropdown-item nav-link nav-custom">Guru &
+                                        Staf</a>
+                                </li>
+
                         </div>
+                        {{-- <div class="nav-item"><a href="{{ url('/guru') }}" class="nav-link nav-custom ">Guru
+                                <span class="sr-only">(current)</span></a></div> --}}
                         <!-- multi-level dropdown-->
                         <div class="nav-item dropdown"><a id="siswa" href="#" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false" class="nav-link nav-custom">Siswa <i
@@ -102,6 +129,19 @@
                                 </li>
 
                         </div>
+                        <!-- multi-level dropdown-->
+                        <div class="nav-item dropdown"><a id="siswa" href="#" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" class="nav-link nav-custom">Jurusan <i
+                                    class="fa fa-angle-down"></i></a>
+                            <ul aria-labelledby="siswa" class="dropdown-menu">
+                                @foreach ($jurusan as $j)
+                                    <li><a href="{{ url('/jurusan', $j->slug) }}"
+                                            class="dropdown-item nav-link nav-custom text-capitalize ">{{ $j->nama_jurusan }}</a>
+                                @endforeach
+                                </li>
+
+                        </div>
+
                         <div class="nav-item"><a href="{{ url('/prestasi') }}" class="nav-link nav-custom ">Prestasi
                                 <span class="sr-only">(current)</span> </a> </div>
                         <!-- multi-level dropdown-->
@@ -115,13 +155,14 @@
                                         class="dropdown-item nav-link nav-custom">Video</a>
                                 </li>
                         </div>
-                        <div class="nav-item"><a href="{{ url('/berita') }}" class="nav-link nav-custom ">berita
-                                <span class="sr-only">(current)</span></a></div>
-                        <div class="nav-item"><a href="{{ url('/kontak') }}" class="nav-link nav-custom ">Kontak
-                                <span class="sr-only">(current)</span></a></div>
 
+                        <span class="sr-only">(current)</span></a>
                     </div>
+                    <div class="nav-item"><a href="{{ url('/kontak') }}" class="nav-link nav-custom ">Kontak
+                            <span class="sr-only">(current)</span></a></div>
+
                 </div>
+            </div>
             </div>
         </nav>
     </header>

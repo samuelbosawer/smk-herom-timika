@@ -4,12 +4,14 @@
 @endsection
 @section('content')
     @include('front.include.hero')
+    @include('front.include.pengumuman')
 
     <section class="blog-listings">
         <div class="container">
+
             <div class="row">
                 <div class="col-lg-8 order-lg-1">
-                    <h3>Berita Terbaru</h3>
+                    <h3 class="text-uppercase">Berita Terbaru</h3>
                     <div class="row">
                         <p class="col-lg-8">Berita terbaru SMKS Hermon Mimika</p>
                     </div>
@@ -29,9 +31,12 @@
                                         <ul class="post-meta list-inline">
                                             <li class="list-inline-item"><i class="icon-clock-1"></i>
                                                 {{ $b->created_at->isoFormat('dddd, D MMMM Y') }}</li>
-                                            <li class="list-inline-item text-primary"> <i class="fa fa-bookmark mr-0"></i><a
-                                                    href="{{ url('/kategori', $b->kategori->slug) }}"><i
-                                                        class="fas fa-ad"></i> {{ $b->kategori->nama }}</a> </li>
+                                            <li class="list-inline-item text-primary"> <i class="fa fa-bookmark mr-0"></i>
+
+                                                <a href="{{ url('/kategori', $b->kategori->slug) }}"><i
+                                                        class="fas fa-ad"></i> {{ $b->kategori->nama }}</a>
+
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -39,7 +44,7 @@
                         @endforeach
                     </div>
 
-                    <h3>Foto Terbaru</h3>
+                    <h3 class="text-uppercase">Foto Terbaru</h3>
                     <div class="row">
                         <p class="col-lg-8">Foto terbaru SMKS Hermon Mimika</p>
                     </div>
@@ -69,7 +74,7 @@
 
                     </div>
 
-                    <h3>Video Terbaru</h3>
+                    <h3 class="text-uppercase">Video Terbaru</h3>
                     <div class="row">
                         <p class="col-lg-8">Video terbaru SMKS Hermon Mimika</p>
                     </div>

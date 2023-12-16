@@ -10,17 +10,17 @@ use Illuminate\Support\Str;
 
 class KategoriController extends Controller
 {
-    Public function index()
+    public function index()
     {
         $datas = Kategori::orderByDesc('id')->get();
-        return view('back.kategori.index',["datas" => $datas]);
+        return view('back.kategori.index', ["datas" => $datas]);
     }
 
-    Public function show($id)
+    public function show($id)
     {
     }
 
-    Public function create()
+    public function create()
     {
         return view('back.kategori.create');
     }
@@ -29,7 +29,7 @@ class KategoriController extends Controller
     {
         $validates = $request->validate([
             "nama" => 'required'
-        ],[
+        ], [
             "nama.required" => 'Nama kategori tidak boleh kosong'
         ]);
 
@@ -39,22 +39,19 @@ class KategoriController extends Controller
         $data->save();
         Alert::success('Info', 'Tambah data kategori berita berhasil ');
         return redirect('/admin/kategori');
-
-
-
     }
 
-    Public function edit($id)
+    public function edit($id)
     {
-        $data = Kategori::where("id",$id)->first();
-        return view('back.kategori.edit',["id" => $id, "data" => $data]);
+        $data = Kategori::where("id", $id)->first();
+        return view('back.kategori.edit', ["id" => $id, "data" => $data]);
     }
 
     public function update(Request $request, $id)
     {
         $validates = $request->validate([
             "nama" => 'required'
-        ],[
+        ], [
             "nama.required" => 'Nama kategori tidak boleh kosong'
         ]);
 
@@ -64,7 +61,6 @@ class KategoriController extends Controller
         $data->update();
         Alert::success('Info', 'Data ketegori berita berhasil diubah');
         return redirect('/admin/kategori');
-
     }
 
     public function destrory($id)

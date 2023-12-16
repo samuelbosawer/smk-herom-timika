@@ -14,9 +14,9 @@
 
                       <div class="video">
                           <a href="https://youtu.be/IjDHbK38e_o" data-lity>
-                              <img src="assets-visitor/img/hero-img.jpg" class="img-fluid" alt="...">
+                              <img src="/assets-visitor/img/hero-img.jpg" class="img-fluid" alt="...">
                               <div class="overlay d-flex align-items-center justify-content-center">
-                                  <img src="assets-visitor/img/play.svg" alt="...">
+                                  <img src="/assets-visitor/img/play.svg" alt="...">
                               </div>
                           </a>
                       </div>

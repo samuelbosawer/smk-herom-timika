@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-xl-8 text-content">
                     <h3 class="mb-4">Struktur Organisasi Sekolah </h3>
-                    {{ $data->struktur }}
+                    {!! $data->struktur !!}
                 </div>
                 <div class="col-xl-4 text-content">
                     @include('front.include.sidebar')

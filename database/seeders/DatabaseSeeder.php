@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\DetailFoto;
+use App\Models\Perangkat;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -24,6 +25,10 @@ class DatabaseSeeder extends Seeder
         $this->call(DetailFotoSeeder::class);
         $this->call(VideoSeeder::class);
         $this->call(ProfilSeeder::class);
+        $this->call(GuruSeeder::class);
+        $this->call(PerangkatSeeder::class);
+        $this->call(PengumumanSeeder::class);
+        $this->call(JurusanSeeder::class);
         $this->call(PengaturanSeeder::class);
     }
 }

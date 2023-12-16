@@ -5,10 +5,18 @@ nav.navbar a.navbar-brand strong{
 footer.footer {
     background: #fff;
     color: #fff;
-    padding-top: 4rem;
+    padding-top: 0px;
 }
 
 .navbar-nav .nav-link {
     padding-right: 0;
     padding-left: 15px !important;
+}
+
+.events{
+    padding: 0px;
+}
+
+.blog-listings{
+    /* padding: 0px; */
 }

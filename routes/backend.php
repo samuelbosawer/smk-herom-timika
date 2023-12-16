@@ -12,8 +12,11 @@ use App\Http\Controllers\Back\FotoController;
 use App\Http\Controllers\Back\VideoController;
 use App\Http\Controllers\Back\ProfilController;
 use App\Http\Controllers\Back\PengaturanController;
-
-
+use App\Http\Controllers\Back\GuruController;
+use App\Http\Controllers\Back\PengumumanController;
+use App\Http\Controllers\Back\JurusanController;
+// use App\Http\Controllers\Back\PerangkatController;
+use App\Models\Perangkat;
 
 // ADMIN
 Route::group(['middleware' => ['role:admin', 'auth']], function () {
@@ -94,6 +97,42 @@ Route::group(['middleware' => ['role:admin', 'auth']], function () {
         Route::put('visi-misi/{id}', [ProfilController::class, 'visi_misi_update'])->name('visi-misi.update');
         Route::get('struktur-organisasi', [ProfilController::class, 'struktur'])->name('struktur-organisasi');
         Route::put('struktur-organisasi/{id}', [ProfilController::class, 'struktur_update'])->name('struktur.update');
+
+        // Pengumuman
+        Route::get('pengumuman', [PengumumanController::class, 'index'])->name('pengumuman');
+        Route::get('pengumuman/create', [PengumumanController::class, 'create'])->name('pengumuman.create');
+        // Route::get('pengumuman/{id}',[PengumumanController::class,'show'])->name('pengumuman.show');
+        Route::delete('pengumuman/{id}', [PengumumanController::class, 'destrory'])->name('pengumuman.delete');
+        Route::post('pengumuman/storage', [PengumumanController::class, 'storage'])->name('pengumuman.storage');
+        Route::get('pengumuman/{id}/edit', [PengumumanController::class, 'edit'])->name('pengumuman.edit');
+        Route::put('pengumuman/{id}', [PengumumanController::class, 'update'])->name('pengumuman.update');
+
+        // Perangkat
+        // Route::get('perangkat', [PerangkatController::class, 'index'])->name('perangkat');
+        // Route::get('perangkat/create', [PerangkatController::class, 'create'])->name('perangkat.create');
+        // // Route::get('perangkat/{id}',[PerangkatController::class,'show'])->name('perangkat.show');
+        // Route::delete('perangkat/{id}', [PerangkatController::class, 'destrory'])->name('perangkat.delete');
+        // Route::post('perangkat/storage', [PerangkatController::class, 'storage'])->name('perangkat.storage');
+        // Route::get('perangkat/{id}/edit', [PerangkatController::class, 'edit'])->name('perangkat.edit');
+        // Route::put('perangkat/{id}', [PerangkatController::class, 'update'])->name('perangkat.update');
+
+        // Guru
+        Route::get('guru', [GuruController::class, 'index'])->name('guru');
+        Route::get('guru/create', [GuruController::class, 'create'])->name('guru.create');
+        // Route::get('guru/{id}',[GuruController::class,'show'])->name('guru.show');
+        Route::delete('guru/{id}', [GuruController::class, 'destrory'])->name('guru.delete');
+        Route::post('guru/storage', [GuruController::class, 'storage'])->name('guru.storage');
+        Route::get('guru/{id}/edit', [GuruController::class, 'edit'])->name('guru.edit');
+        Route::put('guru/{id}', [GuruController::class, 'update'])->name('guru.update');
+
+        // Guru
+        Route::get('jurusan', [JurusanController::class, 'index'])->name('jurusan');
+        // Route::get('jurusan/create', [JurusanController::class, 'create'])->name('jurusan.create');
+        Route::get('jurusan/{id}', [JurusanController::class, 'show'])->name('jurusan.show');
+        Route::delete('jurusan/{id}', [JurusanController::class, 'destrory'])->name('jurusan.delete');
+        // Route::post('jurusan/storage', [JurusanController::class, 'storage'])->name('jurusan.storage');
+        Route::get('jurusan/{id}/edit', [JurusanController::class, 'edit'])->name('jurusan.edit');
+        Route::put('jurusan/{id}', [JurusanController::class, 'update'])->name('jurusan.update');
     });
 });
 

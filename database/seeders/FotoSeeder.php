@@ -18,11 +18,11 @@ class FotoSeeder extends Seeder
             'foto' => 'gambar/foto.jpg',
             'link_foto' => '',
         ]);
+
         $foto = Foto::create([
             'judul_foto' => 'Penerimaan Siswa',
             'foto' => 'gambar/foto.jpg',
             'link_foto' => 'https://www.instagram.com/p/CxxRePqPBrx/',
         ]);
-
     }
 }

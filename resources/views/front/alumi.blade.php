@@ -21,7 +21,7 @@
         </div>
         <div class="container">
             <header class="text-center">
-                <h2> ALUMI</h2>
+                <h2> Alumi </h2>
                 <p>Daftar nama siswa tamatan SMKS Hermon Timika</p>
             </header>
 

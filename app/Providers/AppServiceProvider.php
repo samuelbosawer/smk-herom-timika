@@ -6,6 +6,8 @@ namespace App\Providers;
 
 use App\Models\Pengaturan;
 use App\Models\Kategori;
+use App\Models\Jurusan;
+use App\Models\Pengumuman;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\URL;
@@ -37,6 +39,8 @@ class AppServiceProvider extends ServiceProvider
             view()->share([
                 'pengaturan' => Pengaturan::first(),
                 'kategori' => Kategori::get(),
+                'jurusan' => Jurusan::get(),
+                'pengumuman' => Pengumuman::orderByDesc('id')->get()
             ]);
         } catch (\Exception $e) {
         }

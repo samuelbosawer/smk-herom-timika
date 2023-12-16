@@ -28,6 +28,24 @@
                              <span> Alumi </span>
                          </a>
                      </li>
+                     <li>
+                         <a href="{{ url('admin/guru') }}">
+                             <i data-feather="user-check"></i>
+                             <span> Guru </span>
+                         </a>
+                     </li>
+                     <li>
+                         <a href="{{ url('admin/jurusan') }}">
+                             <i data-feather="box"></i>
+                             <span> Jurusan </span>
+                         </a>
+                     </li>
+                     <li>
+                         <a href="{{ url('admin/pengumuman') }}">
+                             <i data-feather="book"></i>
+                             <span> Pengumuman </span>
+                         </a>
+                     </li>
 
 
 

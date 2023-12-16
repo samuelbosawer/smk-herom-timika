@@ -62,31 +62,15 @@
 <section class="info-boxes">
     <div class="container">
         <div class="row">
-            <a style="background: url(assets-visitor/img/boxes-img-1.jpeg);" class="info-box red text-white  col-lg-3">
-                <div class="info-box-content">
-                    <h3 class="text-uppercase">Geologi Pertambangan</h3>
-                    <p></p>
-                </div>
-            </a>
-            <a style="background: url(assets-visitor/img/boxes-img-2.jpg);" class="info-box cyan col-lg-3 text-white">
-                <div class="info-box-content">
-                    <h3 class="text-uppercase">Teknik Alat berat</h3>
-                    <p></p>
-                </div>
-            </a>
-            <a style="background: url(assets-visitor/img/boxes-img-3.jpg);"
-                class="info-box orange  col-lg-3 text-white dark">
-                <div class="info-box-content">
-                    <h3 class="text-uppercase">Administrasi Perkantoran</h3>
-                    <p></p>
-                </div>
-            </a>
-            <a style="background: url(assets-visitor/img/boxes-img-4.jpg);" class="info-box abu text-white col-lg-3">
-                <div class="info-box-content">
-                    <h3 class="text-uppercase">Teknik
-                        Komputer dan
-                        Jaringan</h3>
-                    <p></p>
-                </div>
-            </a>
+            @foreach ($jurusan as $j)
+                <a href="{{ url('jurusan', $j->slug) }}" style="background: url(assets-visitor/img/boxes-img-1.jpg);"
+                    class="info-box {{ $j->warna }} text-white  col-lg-3">
+                    <div class="info-box-content">
+                        <h3 class="text-uppercase"> {{ $j->nama_jurusan }}</h3>
+                        <p></p>
+                    </div>
+                </a>
+            @endforeach
+        </div>
+    </div>
 </section>

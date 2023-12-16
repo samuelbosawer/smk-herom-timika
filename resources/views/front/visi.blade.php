@@ -19,9 +19,9 @@
             <div class="row">
                 <div class="col-xl-8 text-content">
                     <h1 class="mb-4">VISI </h1>
-                    {{ $data->visi }}
+                    {!! $data->visi !!}
                     <h1 class="mb-4 mt-4">MISI </h1>
-                    {{ $data->misi }}
+                    {!! $data->misi !!}
 
 
                 </div>

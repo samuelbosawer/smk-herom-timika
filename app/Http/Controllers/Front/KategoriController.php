@@ -14,7 +14,7 @@ class KategoriController extends Controller
         $data = DB::table('kategoris')
             ->join('beritas', 'kategoris.id', '=', 'beritas.id_kategori')
             ->where('beritas.status', 'Publish')
-            ->Orwhere('kategoris.nama', 'like', '%' . $id . '%')
+            ->where('kategoris.slug', 'like', '%' . $id . '%')
             ->orderByDesc('kategoris.id')
             ->get();
         $berita = Berita::inRandomOrder()->where('status', 'Publish')->orderByDesc('id')->limit(4)->get();
