@@ -63,7 +63,7 @@ class AlumiController extends Controller
     {
 
         $data = Alumi::where('id', $id)->first();
-        return view('back.Alumi.edit', compact('data', 'id'));
+        return view('back.alumi.edit', compact('data', 'id'));
     }
 
     public function update(Request $request, $id)
