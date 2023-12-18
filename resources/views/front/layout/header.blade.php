@@ -16,6 +16,11 @@
     <meta property="og:site_name" content="{{ $pengaturan->nama_web }}" />
     <meta property="og:image" content="{{ asset($pengaturan->nav) }}" />
 
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ $pengaturan->nama_web }}">
+    <meta name="twitter:description" content="{{ $pengaturan->desk_web }}">
+    <meta name="twitter:image" content="{{ asset($pengaturan->nav) }}">
+
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="/assets-visitor/vendor/bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome CSS-->
@@ -83,7 +88,8 @@
                                 aria-haspopup="true" aria-expanded="false" class="nav-link nav-custom">Berita <i
                                     class="fa fa-angle-down"></i></a>
                             <ul aria-labelledby="berita" class="dropdown-menu">
-                                <li><a href="{{ url('/berita') }}" class="dropdown-item nav-link nav-custom">Berita</a>
+                                <li><a href="{{ url('/berita') }}"
+                                        class="dropdown-item nav-link nav-custom">Berita</a>
                                 </li>
                                 <li class="dropdown-submenu"><a id="kategori" href="http://example.com"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"

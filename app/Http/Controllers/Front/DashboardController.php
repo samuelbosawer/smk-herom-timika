@@ -8,6 +8,7 @@ use App\Models\Foto;
 use App\Models\Video;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Artesaos\SEOTools\Facades\SEOTools;
 
 use Illuminate\Support\Str;
 
@@ -15,6 +16,15 @@ class DashboardController extends Controller
 {
     public function index()
     {
+
+        SEOTools::setTitle('Home');
+        SEOTools::setDescription('This is my page description');
+        SEOTools::opengraph()->setUrl('http://current.url.com');
+        SEOTools::setCanonical('https://codecasts.com.br/lesson');
+        SEOTools::opengraph()->addProperty('type', 'articles');
+        SEOTools::twitter()->setSite('@LuizVinicius73');
+        SEOTools::jsonLd()->addImage('https://codecasts.com.br/img/logo.jpg');
+
         $berita = Berita::where('status', 'Publish')->orderByDesc('id')->limit(4)->get();
         $foto = Foto::orderByDesc('id')->limit(4)->get();
         $video = Video::orderByDesc('id')->limit(4)->get();

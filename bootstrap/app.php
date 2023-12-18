@@ -15,6 +15,17 @@ $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
 
+
+// $app = new Laravel\Lumen\Application(
+//     dirname(__DIR__)
+// );
+
+// ...
+
+$app->register(Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class);
+
+// ...
+
 /*
 |--------------------------------------------------------------------------
 | Bind Important Interfaces
@@ -51,5 +62,9 @@ $app->singleton(
 | from the actual running of the application and sending responses.
 |
 */
+
+// ...
+
+
 
 return $app;
