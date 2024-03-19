@@ -17,6 +17,8 @@ class BeritaController extends Controller
     public function show($slug)
     {
         $data = Berita::where('slug', $slug)->where('status', 'Publish')->first();
-        return view('front.berita-detail', compact('data'));
+        $cover = $data->cover;
+        $judul = $data->judul;
+        return view('front.berita-detail', compact('data','cover','judul'));
     }
 }

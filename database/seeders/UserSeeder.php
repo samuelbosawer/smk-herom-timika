@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
             'last_name' => '',
             'image' => '',
             'email' => 'admin@smkpkhermontimika.sch.id',
-            'password' =>  bcrypt('admin@smkpkhermontimika.sch.id')
+            'password' =>  bcrypt('#smkpkhermontimika@2024')
         ]);
 
         $admin->assignRole('admin');

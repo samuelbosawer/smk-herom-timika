@@ -3,23 +3,23 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="{{ $pengaturan->nama_web }}" />
+    <meta name="description" content="{{ $judul ?? $pengaturan->nama_web }}" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>@yield('title')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{-- <meta name="robots" content="all,follow"> --}}
     <meta property="og:locale" content="id_ID" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="{{ $pengaturan->nama_web }}" />
+    <meta property="og:title" content="{{ $judul ?? $pengaturan->nama_web }}" />
     <meta property="og:description" content="{{ $pengaturan->desk_web }}" />
     <meta property="og:url" content="{{ $pengaturan->alamat_web }}" />
-    <meta property="og:site_name" content="{{ $pengaturan->nama_web }}" />
-    <meta property="og:image" content="{{ asset($pengaturan->nav) }}" />
+    <meta property="og:site_name" content="{{ $judul ?? $pengaturan->nama_web }}" />
+    <meta property="og:image" content="{{  asset($cover ?? $pengaturan->nav) }}" />
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="{{ $pengaturan->nama_web }}">
+    <meta name="twitter:title" content="{{ $judul ?? $pengaturan->nama_web }}">
     <meta name="twitter:description" content="{{ $pengaturan->desk_web }}">
-    <meta name="twitter:image" content="{{ asset($pengaturan->nav) }}">
+    <meta name="twitter:image" content="{{ asset($cover ?? $pengaturan->nav) }}">
 
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="/assets-visitor/vendor/bootstrap/css/bootstrap.min.css">
